@@ -46,7 +46,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     {
         if (input.text != "")
         {
-        output.text = String(Double(input.text!)! * activeCurrency)
+            let result = Double(input.text!)! * activeCurrency
+            output.text = String(format: "%.2f", result)
         }
     }
            
