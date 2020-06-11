@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Currency_converter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CNZ-vq-eak">
+                                <rect key="frame" x="55" y="227" width="265" height="157"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="265" id="J8A-Yk-2VM"/>
+                                    <constraint firstAttribute="height" constant="157" id="uhL-H2-q3A"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="8IN-7k-qT1"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="eVZ-LK-TsE"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency converter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QzK-We-YQ9">
+                                <rect key="frame" x="72" y="33" width="231.5" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="231.5" id="2Sg-fK-yto"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1PQ-Ek-3Qx">
+                                <rect key="frame" x="16" y="553" width="343" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="CF7-QS-d3e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7H7-M0-g9j">
+                                <rect key="frame" x="130.5" y="444" width="114" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="23y-e4-l6x"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="32"/>
+                                <state key="normal" title="Convert">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rmk-6t-NZM"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="EUR" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="uZ7-iR-7xq">
+                                <rect key="frame" x="127.5" y="147" width="120" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="gZG-7h-vuU"/>
+                                    <constraint firstAttribute="height" constant="34" id="kbx-S6-Nmy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1PQ-Ek-3Qx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="1f4-hq-5Qh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1PQ-Ek-3Qx" secondAttribute="bottom" constant="78" id="8VS-Ol-Ewa"/>
+                            <constraint firstItem="CNZ-vq-eak" firstAttribute="top" secondItem="uZ7-iR-7xq" secondAttribute="bottom" constant="46" id="9Zi-4B-eUP"/>
+                            <constraint firstItem="CNZ-vq-eak" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Aew-3P-YOo"/>
+                            <constraint firstItem="1PQ-Ek-3Qx" firstAttribute="top" secondItem="7H7-M0-g9j" secondAttribute="bottom" constant="60" id="III-Ln-UEe"/>
+                            <constraint firstItem="QzK-We-YQ9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="UcB-qO-6Li"/>
+                            <constraint firstItem="QzK-We-YQ9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="33" id="Ztg-dl-l0O"/>
+                            <constraint firstItem="uZ7-iR-7xq" firstAttribute="top" secondItem="QzK-We-YQ9" secondAttribute="bottom" constant="62" id="j0C-9a-J6T"/>
+                            <constraint firstItem="uZ7-iR-7xq" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="j1i-Of-Sbf"/>
+                            <constraint firstItem="7H7-M0-g9j" firstAttribute="top" secondItem="CNZ-vq-eak" secondAttribute="bottom" constant="60" id="mgO-At-W8Y"/>
+                            <constraint firstItem="7H7-M0-g9j" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="xJ2-Wk-kdc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="input" destination="uZ7-iR-7xq" id="arJ-tn-0cQ"/>
+                        <outlet property="output" destination="1PQ-Ek-3Qx" id="NzH-lW-rLN"/>
+                        <outlet property="pickerView" destination="CNZ-vq-eak" id="7ec-yU-afh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2581.5999999999999" y="12.143928035982009"/>
+        </scene>
+    </scenes>
+</document>
